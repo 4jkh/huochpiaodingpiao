@@ -1,0 +1,72 @@
+alipay:
+  # 支付宝应用ID
+  appId: 2021000146651950
+  # 商户私钥
+  merchantPrivateKey: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC1TAc7QSm3nYC6/NL1BG8NpqzcWBYqUyYtUZ+DQrNUHdZLbEQ2bKabrDRFs/WZ4osoke7FzWiuBEOAnf8nGdYJtOGvOrZx0D/jihALGGmRIGxgwL4dyyNnoueGadaECbyrToolmFfb/ViWJxePc+GBA6D7RYIPKGb7JmJ/xqRcodU39DyKjr3lfnFyaLM/pzgYi06MONJs1fopU8ztzpDdJgit5SQU9ml4iF85ECcc3rijLGrRHKHeXoQo6Ueuksq22ewQKRvuYB1BBkh7SgQ6IJrB13Ui4qp3pCpFsC3jQm2YF4zREqySNSmRgEODfuWgKaifOeHnc3E/GP4Ccj+NAgMBAAECggEBAIZNdQnzQtkvx149znUNvMrrDyEH7BucjyqBTd5p+fi1RbuHz5xVrrKhxfNg1e8SgK4kNTK48PQAWpUb9hlcLU/xfEJYBzGW6M1ByJK/meyVjVO7VNszUd4DMupC21Pi9q4ct4AUM/nW2toYyX5OhN4S9x1NJ4TdFDS3Ab7QQ5AOXRxsKEo/aMEiMggWSsnizf+QnXshoGesVhHac/YbJkQTMPRFSm5TrV78UKe9sEUVrXoH0YCG9df0NBG58hT8CfpEcobxO0hC9is3sWXjyvzEhbHgr7fCmafKBxG9lxHLibGhuwAHFRlKNfVx7YlcawAjvHz7C2B2HfbnfR/nKM0CgYEA81F9yFKJ+DUDrLuh2hv4C4Hw376GgLLnJEijfAPwhns5KZevZxSDN/WZTPUP9F8Sc9uadHVl8LRYOQTiShrWBSmbO6Xl/INFT4MaLF6K2ck5vfMcMGe3Hh3oPulE24X5I6kORhwx212mNvCknM/eUnY9Pp5wTEzMaFFQ5JIf708CgYEAvr8CL3InwjuQ/PGqBsl5vOtmmUjIv3N4jWd9pghzRpQC5Y3n/+seuffxpCYXIsPs6pChBO+0MNBfVWsQvcoqNqa0wNFBk5im27F/8kHaHJCS/MU/pQOhXHgr71lAfshF0Qsjo1K91H0KK/a4IH28uGjSTdSvs9ecfep/2oDPDGMCgYEA2l9u5hS94tehnqsfTaMAcUODrStPh74ImJXgs/LNMcTxvpR2RasxQU3Y8iqW0RlqdDTJYG/kt60D6NirRxriretzeIsh6AjgccYV/XA0adWhTwsbZ44N2Ke6wouU0vhga1LUjrPLQze/b1t2QY6F17hqqwKDgtcCNTWVxi4nHx0CgYEApfvG5gybRmzZJRMSVqeZ9OiPNlHcxqSvwbTN5N4zmbYQszsCKHOsID3/G00+ErWVgyRpycbg8R1R6B2rysuSYk48uhEd1Fcg08oowWHGb9bq4WSvlmOLVdEIwlXTRr/16QudbnEA2VgZstoVrchcocgtQScT4hZ8iiG2Miimg2sCgYBwaATWGndlfuixB1SL7scnIfinRTaYGN/GHJrdgUFXs59QQijr0g7MFACRiwgTbsOFHAIkkd/W8bKuMg410f2XUodgXAGEzMB+HQ9FdHZvbnmEDMsVbGg8DGvuDW7miQ6tm48Ghs7mjAOOpxFPZRuiOf1D2yGIoa6jyLa0wHFpmQ==
+  # 支付宝公钥
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBetEAkyaJ38/PqDTVpd0uMc4ZG7Mch48puSeABpR/3cAI2gmhdRlV/1Gqsloeo3CcKoYo6aGhwHtTJNjoljc/cz0T+1mrUHhRp17PCKR2JYAyvphmqAMrNl0A0IpQXjJCrMQ1e5JGxNervzfe28Yx4BFilni5rmkCyuL2TQ4f0JOIp9vQWxSDDreVjGdjnZK1JE/1KjJvrNtY0Yer0YYdkxogHoed1wn9MDUVKta0lK0mpkGBcCoOm3rRZ9J+n3TQwTn6hv9As9z/w2OUQuxaShix7okuBf/B2k0cJaaZaxF4f+62a5sonhWVkH9Y49OM+bOr2NGxtOiQT6VG+ZrQIDAQAB
+  # 支付完成后的异步通知地址，用于接收支付结果通知，需要穿透http://h5p78n.natappfree.cc/order/notify
+  notifyUrl: http://684iws.natappfree.cc/huochpiaodingpiao/checiOrder/notify
+  # 支付成功后返回的页面地址（同步回调）
+  returnUrl: http://684iws.natappfree.cc/huochpiaodingpiao/front/index.html
+  # 签名方式
+  signType: RSA2
+  charset: utf-8
+  # 支付宝网关地址
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+
+
+
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+    port: 8080
+    servlet:
+        context-path: /huochpiaodingpiao
+
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/huochpiaodingpiao?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+        username: root
+        password: liuboyu360502
+
+
+    servlet:
+      multipart:
+        max-file-size: 1000MB
+        max-request-size: 1000MB
+    resources:
+      static-locations: classpath:static/,file:static/
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.entity
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 1
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #逻辑删除配置
+    logic-delete-value: -1
+    logic-not-delete-value: 0
+    #自定义SQL注入器
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    #springboot 项目mybatis plus 设置 jdbcTypeForNull (oracle数据库需配置JdbcType.NULL, 默认是Other)
+    jdbc-type-for-null: 'null'
+
+#打印sql语句
+logging:
+  level:
+    com.dao: debug

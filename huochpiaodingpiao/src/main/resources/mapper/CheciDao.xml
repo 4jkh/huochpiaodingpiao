@@ -57,7 +57,7 @@
                 and a.checi_mudidi like CONCAT('%',#{params.checiMudidi},'%')
             </if>
             <if test=" params.checiTimeStart != '' and params.checiTimeStart != null ">
-                <![CDATA[  and UNIX_TIMESTAMP(a.checi_time) >= UNIX_TIMESTAMP(#{params.checiTimeStart}) ]]>
+                <![CDATA[  and UNIX_TIMESTAMP(a.checi_time) <= UNIX_TIMESTAMP(#{params.checiTimeStart}) ]]>
             </if>
             <if test=" params.checiTimeEnd != '' and params.checiTimeEnd != null ">
                 <![CDATA[  and UNIX_TIMESTAMP(a.checi_time) <= UNIX_TIMESTAMP(#{params.checiTimeEnd}) ]]>

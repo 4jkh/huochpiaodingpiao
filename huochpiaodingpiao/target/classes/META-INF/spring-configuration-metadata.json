@@ -50,8 +50,7 @@
     {
       "name": "alipay.timeout",
       "type": "java.lang.String",
-      "sourceType": "com.config.AlipayTemplate",
-      "defaultValue": "1h"
+      "sourceType": "com.config.AlipayTemplate"
     }
   ],
   "hints": []

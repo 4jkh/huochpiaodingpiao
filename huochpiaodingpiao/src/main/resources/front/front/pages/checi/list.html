@@ -329,13 +329,13 @@
                 <div class="item-list">
                     <div class="lable"
                          :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"rgba(17, 16, 16, 1)","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"auto","fontSize":"16px","borderStyle":"solid"}'>
-                        出发时间
+                        出发时间前
                     </div>
                     <el-date-picker
                             value-format="yyyy-MM-dd HH:mm:ss"
                             v-model="searchForm.checiTimeStart"
                             type="datetime"
-                            placeholder="出发时间"
+                            placeholder="出发时间前"
                     >
                     </el-date-picker>
                 </div>
@@ -410,6 +410,7 @@
                 , shangxiaTypes: 1
                 , checiName: ""
                 , checiTypes: ""
+                , checiTimeStart: ""
             },
 
 
@@ -518,7 +519,7 @@
             });
         }
 
-        //当前表的 是否上架 字段 字典表查询方法
+        //当前表的 火车类型 字段 字典表查询方法
         function shangxiaTypesSelect() {
             http.request("dictionary/page?page=1&limit=100&sort=&order=&dicCode=shangxia_types", 'get', {}, function (res) {
                 if (res.code == 0) {
